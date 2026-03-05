@@ -183,7 +183,7 @@ button {
 /* Hero Section */
 .hero {
   height: 90vh;
-  background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.7)), url('./dist/') center/cover no-repeat;
+  background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.7)), url('./dist/dzire.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
