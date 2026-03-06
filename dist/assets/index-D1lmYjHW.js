@@ -1,4 +1,4 @@
-(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))r(o);new MutationObserver(o=>{for(const a of o)if(a.type==="childList")for(const l of a.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&r(l)}).observe(document,{childList:!0,subtree:!0});function t(o){const a={};return o.integrity&&(a.integrity=o.integrity),o.referrerPolicy&&(a.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?a.credentials="include":o.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function r(o){if(o.ep)return;o.ep=!0;const a=t(o);fetch(o.href,a)}})();const p="/vikatakavi-site/assets/dzire-Cwq_yno_.png",v="/vikatakavi-site/assets/etios-OKOg9Sxp.png",b="/vikatakavi-site/assets/innova-DQa0xaRI.png",n={brand:{name:"Vikatakavi",logoText:"Vikatakavi<span>.</span>"},navLinks:[{label:"Home",href:"#home"},{label:"Our Cars",href:"#fleet"},{label:"Contact",href:"#contact"}],hero:{title:"Reliable Rides Across Tamil Nadu",subtitle:"Affordable, comfortable, and well-maintained cars for all your travel needs.",ctaText:"Book Your Ride"},fleetSection:{title:"Our Popular Cars",subtitle:"Choose the perfect vehicle for your journey.",cars:[{id:"Dzire",name:"Maruti Suzuki Dzire",image:p,description:"Perfect for city commutes and small families. Excellent mileage and comfort."},{id:"Etios",name:"Toyota Etios",image:v,description:"Spacious cabin and reliable performance. Ideal for longer highway trips."},{id:"Innova",name:"Toyota Innova Crysta",image:b,description:"Premium 7-seater comfort for large families and group travel."}]},contact:{title:"Get in Touch",info:[{label:"Call Us",value:"+91 98765 43210"},{label:"Email",value:"contact@vikatakavi.in"},{label:"Location",value:"T. Nagar, Chennai, Tamil Nadu"}]},footer:{text:"Vikatakavi Travels. All rights reserved."},modal:{title:"Book Your Ride",subtitle:"Fill in the details and we'll confirm your trip shortly.",successMessage:"Nandri! Thank you for choosing Vikatakavi. Our team will call you shortly to confirm."}};function g(e){const i=e.navLinks.map(t=>`<a href="${t.href}">${t.label}</a>`).join("");return`
+(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))r(o);new MutationObserver(o=>{for(const a of o)if(a.type==="childList")for(const l of a.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&r(l)}).observe(document,{childList:!0,subtree:!0});function t(o){const a={};return o.integrity&&(a.integrity=o.integrity),o.referrerPolicy&&(a.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?a.credentials="include":o.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function r(o){if(o.ep)return;o.ep=!0;const a=t(o);fetch(o.href,a)}})();const p=""+new URL("dzire-Cwq_yno_.png",import.meta.url).href,v=""+new URL("etios-OKOg9Sxp.png",import.meta.url).href,b=""+new URL("innova-DQa0xaRI.png",import.meta.url).href,s={brand:{name:"Vikatakavi",logoText:"Vikatakavi<span>.</span>"},navLinks:[{label:"Home",href:"#home"},{label:"Our Cars",href:"#fleet"},{label:"Contact",href:"#contact"}],hero:{title:"Reliable Rides Across Tamil Nadu",subtitle:"Affordable, comfortable, and well-maintained cars for all your travel needs.",ctaText:"Book Your Ride"},fleetSection:{title:"Our Popular Cars",subtitle:"Choose the perfect vehicle for your journey.",cars:[{id:"Dzire",name:"Maruti Suzuki Dzire",image:p,description:"Perfect for city commutes and small families. Excellent mileage and comfort."},{id:"Etios",name:"Toyota Etios",image:v,description:"Spacious cabin and reliable performance. Ideal for longer highway trips."},{id:"Innova",name:"Toyota Innova Crysta",image:b,description:"Premium 7-seater comfort for large families and group travel."}]},contact:{title:"Get in Touch",info:[{label:"Call Us",value:"+91 98765 43210"},{label:"Email",value:"contact@vikatakavi.in"},{label:"Location",value:"T. Nagar, Chennai, Tamil Nadu"}]},footer:{text:"Vikatakavi Travels. All rights reserved."},modal:{title:"Book Your Ride",subtitle:"Fill in the details and we'll confirm your trip shortly.",successMessage:"Nandri! Thank you for choosing Vikatakavi. Our team will call you shortly to confirm."}};function g(e){const i=e.navLinks.map(t=>`<a href="${t.href}">${t.label}</a>`).join("");return`
     <nav class="navbar">
       <div class="nav-container">
         <a href="#" class="logo">${e.brand.logoText}</a>
@@ -8,7 +8,7 @@
         </div>
       </div>
     </nav>
-  `}function y(e){return`
+  `}function h(e){return`
     <header id="home" class="hero">
       <div class="hero-content">
         <h1 class="hero-title">${e.hero.title}</h1>
@@ -16,7 +16,7 @@
         <button class="primary-btn book-now-btn">${e.hero.ctaText}</button>
       </div>
     </header>
-  `}function h(e){const i=e.fleetSection.cars.map(t=>`
+  `}function y(e){const i=e.fleetSection.cars.map(t=>`
     <div class="car-card">
       <div class="car-image-container">
         <img src="${t.image}" alt="${t.name}" class="car-image">
@@ -62,7 +62,7 @@
         </div>
       </div>
     </footer>
-  `}function E(e){const i=e.fleetSection.cars.map(t=>`<option value="${t.id}">${t.name}</option>`).join("");return`
+  `}function w(e){const i=e.fleetSection.cars.map(t=>`<option value="${t.id}">${t.name}</option>`).join("");return`
     <div class="modal-overlay" id="bookingModal">
       <div class="modal-content">
         <button class="close-modal" id="closeModal">&times;</button>
@@ -111,10 +111,10 @@
       </div>
     </div>
   `}document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("app");e.innerHTML=`
-    ${g(n)}
-    ${y(n)}
-    ${h(n)}
-    ${k(n)}
-    ${$(n)}
-    ${E(n)}
-  `;const i=document.getElementById("year");i&&(i.textContent=new Date().getFullYear());const t=document.getElementById("bookingModal"),r=document.querySelectorAll(".book-now-btn"),o=document.getElementById("closeModal"),a=document.getElementById("carSelect");function l(s="Any"){if(t.classList.add("active"),document.body.style.overflow="hidden",a){const u=Array.from(a.options).some(m=>m.value===s);a.value=u?s:"Any"}}function d(){t.classList.remove("active"),document.body.style.overflow=""}r.forEach(s=>{s.addEventListener("click",u=>{const m=u.target.getAttribute("data-car")||"Any";l(m)})}),o.addEventListener("click",d),t.addEventListener("click",s=>{s.target===t&&d()});const c=document.getElementById("bookingForm"),f=document.getElementById("successMessage");c.addEventListener("submit",s=>{s.preventDefault(),c.style.display="none",f.style.display="block",setTimeout(()=>{d(),setTimeout(()=>{c.reset(),c.style.display="block",f.style.display="none"},300)},3e3)})});
+    ${g(s)}
+    ${h(s)}
+    ${y(s)}
+    ${k(s)}
+    ${$(s)}
+    ${w(s)}
+  `;const i=document.getElementById("year");i&&(i.textContent=new Date().getFullYear());const t=document.getElementById("bookingModal"),r=document.querySelectorAll(".book-now-btn"),o=document.getElementById("closeModal"),a=document.getElementById("carSelect");function l(n="Any"){if(t.classList.add("active"),document.body.style.overflow="hidden",a){const u=Array.from(a.options).some(m=>m.value===n);a.value=u?n:"Any"}}function d(){t.classList.remove("active"),document.body.style.overflow=""}r.forEach(n=>{n.addEventListener("click",u=>{const m=u.target.getAttribute("data-car")||"Any";l(m)})}),o.addEventListener("click",d),t.addEventListener("click",n=>{n.target===t&&d()});const c=document.getElementById("bookingForm"),f=document.getElementById("successMessage");c.addEventListener("submit",n=>{n.preventDefault(),c.style.display="none",f.style.display="block",setTimeout(()=>{d(),setTimeout(()=>{c.reset(),c.style.display="block",f.style.display="none"},300)},3e3)})});
